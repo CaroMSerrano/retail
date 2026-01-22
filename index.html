@@ -1,223 +1,290 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Neomynd | Agentes IA para Retail & Ecommerce</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- Favicon -->
-<link rel="icon" href="favicon.ico">
+  <!-- SEO -->
+  <title>Agentes IA para Retail & Ecommerce | Neomynd</title>
+  <meta name="description" content="Agentes IA para retail y ecommerce: atención 24/7, automatización de pedidos, seguimiento de clientes y asistencia inteligente.">
+  <meta name="keywords" content="agente IA retail, ecommerce, automatización pedidos, seguimiento clientes, asistencia inteligente">
 
-<style>
-/* RESET */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico">
 
-body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  background: #020617;
-  color: #e5f2ff;
-  padding-top: 80px;
-}
+  <style>
+    /* RESET */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-/* HEADER */
-.header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 70px;
-  background: #010619;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 15px rgba(0,229,255,.2);
-  z-index: 1000;
-}
+    body {
+      font-family: system-ui, sans-serif;
+      background: #020617;
+      color: #e5f2ff;
+      line-height: 1.6;
+      padding-top: 80px;
+    }
 
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-weight: 600;
-  white-space: nowrap;
-}
+    /* HEADER */
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      height: 70px;
+      background: #010619;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 15px rgba(0,229,255,.25);
+      z-index: 1000;
+    }
 
-.logo img {
-  height: 38px;
-}
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 600;
+      white-space: nowrap;
+    }
 
-/* HERO */
-.hero {
-  text-align: center;
-  padding: 80px 20px;
-}
+    .logo img {
+      height: 38px;
+    }
 
-.hero h1 {
-  font-size: 2.2rem;
-  margin-bottom: 12px;
-}
+    /* SECTIONS */
+    section {
+      padding: 80px 20px;
+      text-align: center;
+    }
 
-.hero span {
-  color: #00e5ff;
-}
+    h1 {
+      font-size: 2.4rem;
+      margin-bottom: 15px;
+    }
 
-.hero p {
-  color: #cbd5f5;
-  margin-bottom: 30px;
-}
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+    }
 
-/* BOTÓN */
-.btn {
-  display: inline-block;
-  padding: 14px 28px;
-  background: #00e5ff;
-  color: #020617;
-  font-weight: 600;
-  border-radius: 999px;
-  text-decoration: none;
-  box-shadow: 0 0 20px rgba(0,229,255,0.5);
-  transition: transform .2s ease, box-shadow .2s ease;
-}
+    .neon {
+      color: #00e5ff;
+    }
 
-.btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 0 30px rgba(0,229,255,0.8);
-}
+    .lead {
+      max-width: 750px;
+      margin: 0 auto 35px;
+      color: #cbd5f5;
+    }
 
-/* FEATURES */
-.features {
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 0 20px;
-  text-align: center;
-}
+    /* BUTTON */
+    .btn {
+      display: inline-block;
+      padding: 14px 32px;
+      background: #00e5ff;
+      color: #020617;
+      font-weight: 700;
+      border-radius: 999px;
+      text-decoration: none;
+      box-shadow: 0 0 25px rgba(0,229,255,.6);
+      transition: transform .2s ease;
+    }
 
-.features h2 {
-  margin-bottom: 30px;
-}
+    .btn:hover {
+      transform: translateY(-2px);
+    }
 
-.card {
-  border: 2px solid #00e5ff;
-  border-radius: 12px;
-  padding: 25px;
-  margin-bottom: 25px;
-  background: rgba(0,229,255,0.05);
-  box-shadow: 0 0 20px rgba(0,229,255,0.2);
-}
+    /* GRID GENERIC */
+    .grid {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: grid;
+      gap: 25px;
+    }
 
-.card h3 {
-  color: #00e5ff;
-  margin-bottom: 15px;
-}
+    /* GRID 4 EN UNA LINEA */
+    .grid-4 {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 25px;
+    }
 
-.card ul {
-  list-style: none;
-}
+    @media (max-width: 1024px) {
+      .grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
 
-.card li {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-  margin: 6px 0;
-}
+    @media (max-width: 600px) {
+      .grid-4 {
+        grid-template-columns: 1fr;
+      }
+    }
 
-.card li::before {
-  content: "✓";
-  color: #22c55e;
-  font-weight: bold;
-}
+    /* CARDS */
+    .card {
+      border: 2px solid #00e5ff;
+      border-radius: 14px;
+      padding: 30px 20px;
+      background: rgba(0,229,255,.05);
+      height: 100%;
+    }
 
-/* CTA */
-.cta {
-  text-align: center;
-  margin: 80px 20px;
-}
+    .card h3 {
+      color: #00e5ff;
+      margin-bottom: 15px;
+    }
 
-.cta .btn {
-  margin-top: 25px;
-}
+    .card p {
+      color: #cbd5f5;
+    }
 
-.neon-line {
-  border: none;
-  height: 3px;
-  background: #00e5ff;
-  box-shadow: 0 0 10px #00e5ff, 0 0 20px #00e5ff;
-  margin: 40px 0;
-}
+    .card ul {
+      list-style: none;
+      padding: 0;
+    }
 
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 30px;
-  color: #9ccfff;
-}
+    .card li {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      margin: 8px 0;
+    }
 
-footer .brand {
-  font-weight: 700;
-  color: #00e5ff;
-}
-</style>
+    .card li::before {
+      content: "✓";
+      color: #22c55e;
+      font-weight: 700;
+    }
+
+    /* NEON LINE */
+    hr.neon {
+      border: none;
+      height: 3px;
+      background: #00e5ff;
+      box-shadow: 0 0 10px #00e5ff;
+      margin: 60px 0;
+    }
+
+    /* FOOTER */
+    footer {
+      padding: 40px 20px;
+      text-align: center;
+      color: #9ccfff;
+    }
+
+    footer .brand {
+      color: #00e5ff;
+      font-weight: 700;
+    }
+  </style>
 </head>
 
 <body>
 
-<header class="header">
+<!-- HEADER -->
+<header>
   <div class="logo">
-    <img src="https://raw.githubusercontent.com/CaroMSerrano/neomyndlanding/main/Images/Isotipo_NeoMynd.png" alt="Neomynd">
-    NeoMynd – Future Intelligence, Today
+    <a href="/" style="display:flex; align-items:center; gap:10px; color:inherit; text-decoration:none;">
+      <img src="https://raw.githubusercontent.com/CaroMSerrano/neomyndlanding/main/Images/Isotipo_NeoMynd.png" alt="Neomynd logo">
+      NeoMynd – Future Intelligence, Today
+    </a>
   </div>
 </header>
 
-<section class="hero">
-  <h1>Agentes IA para <span>Retail & Ecommerce</span></h1>
-  <p>Más conversiones, menos carritos abandonados y atención al cliente 24/7.</p>
+<!-- HERO -->
+<section>
+  <h1>Agentes IA para <span class="neon">Retail & Ecommerce</span></h1>
+  <p class="lead">
+    Automatiza atención al cliente, pedidos y seguimiento 24/7 sin saturar al equipo comercial.
+  </p>
 
   <a class="btn" target="_blank"
      href="https://api.leadconnectorhq.com/widget/booking/SMCCcUsn6LWhstOfftAD">
-    Reservar mi diagnóstico
+    Agendar diagnóstico gratuito
   </a>
 </section>
 
-<hr class="neon-line">
+<hr class="neon">
 
-<section class="features">
-  <h2>¿Qué hace nuestro Agente?</h2>
+<!-- DOLORES (4 EN UNA LINEA) -->
+<section>
+  <h2>Problemas comunes en Retail & Ecommerce</h2>
 
-  <div class="card">
-    <h3>🛒 Conversión y Ventas</h3>
-    <ul>
-      <li>Asiste al cliente durante la compra</li>
-      <li>Recomienda productos y alternativas</li>
-      <li>Reduce carritos abandonados</li>
-    </ul>
-  </div>
+  <div class="grid-4">
+    <div class="card">
+      <h3>❌ Consultas de clientes sin respuesta</h3>
+      <p>Mensajes y preguntas que llegan fuera del horario de atención.</p>
+    </div>
 
-  <div class="card">
-    <h3>📦 Atención al Cliente</h3>
-    <ul>
-      <li>Estado de pedidos y envíos</li>
-      <li>Gestión de cambios y devoluciones</li>
-      <li>Soporte post-venta automático</li>
-    </ul>
-  </div>
+    <div class="card">
+      <h3>❌ Pedidos retrasados o errores</h3>
+      <p>Falta de seguimiento manual que genera inconvenientes en envíos.</p>
+    </div>
 
-  <div class="card">
-    <h3>🔌 Integraciones Ecommerce</h3>
-    <ul>
-      <li>Shopify, WooCommerce, VTEX</li>
-      <li>Sincronización de catálogo y stock</li>
-      <li>Escalado a humanos cuando es necesario</li>
-    </ul>
+    <div class="card">
+      <h3>❌ Carritos abandonados</h3>
+      <p>Clientes pierden interés sin un seguimiento inteligente.</p>
+    </div>
+
+    <div class="card">
+      <h3>❌ Atención saturada</h3>
+      <p>El equipo de soporte se ve sobrecargado por tareas repetitivas.</p>
+    </div>
   </div>
 </section>
 
-<section id="cta" class="cta">
+<!-- SOLUCIÓN -->
+<section>
+  <h2>¿Qué hace el Agente IA?</h2>
+
+  <div class="grid" style="grid-template-columns: 1fr; max-width: 600px; margin: 0 auto; gap: 25px;">
+    <div class="card">
+      <h3>📦 Automatiza pedidos y cotizaciones</h3>
+      <ul>
+        <li>Procesa pedidos sin intervención humana</li>
+        <li>Genera cotizaciones instantáneas</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>🔗 Integración a sistemas internos</h3>
+      <ul>
+        <li>Sincronización con ERP y CRM</li>
+        <li>Flujos automáticos de inventario</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>🤖 Atención 24/7 al cliente</h3>
+      <ul>
+        <li>Respuestas instantáneas en web y WhatsApp</li>
+        <li>Seguimiento de pedidos y consultas</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>💡 Optimiza el equipo de ventas</h3>
+      <ul>
+        <li>Libera al equipo de tareas repetitivas</li>
+        <li>Permite enfocarse en cerrar negocios</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section id="cta">
   <h2>Agenda un Diagnóstico Gratuito</h2>
-  <p>En 30 minutos analizamos cómo aumentar conversiones y escalar tu ecommerce.</p>
+  <p class="lead">
+    En 30 minutos analizamos cómo aumentar ventas y conversiones sin sumar personal.
+  </p>
 
   <a class="btn" target="_blank"
      href="https://api.leadconnectorhq.com/widget/booking/SMCCcUsn6LWhstOfftAD">
@@ -225,8 +292,9 @@ footer .brand {
   </a>
 </section>
 
+<!-- FOOTER -->
 <footer>
-  <hr class="neon-line">
+  <hr class="neon">
   <p><span class="brand">Neomynd</span> – Future Intelligence, Today</p>
 </footer>
 
