@@ -149,7 +149,10 @@
       padding: 0;
     }
 
-    .card li {
+    .card li::before {
+      content: "✓";
+      color: #22c55e;
+      font-weight: 700; 
       display: flex;
       justify-content: center;
       align-items: center;
