@@ -157,11 +157,21 @@
       margin: 8px 0;
     }
 
-    .card li::before {
+   /* .card li::before {
       content: "✓";
       color: #22c55e;
       font-weight: 700;
-    }
+    }*/
+
+    .card li {
+  display: flex;
+  align-items: center;   /* mantenemos el check alineado */
+  gap: 8px;
+  margin: 8px 0;
+  justify-content: flex-start;  /* en vez de center */
+  flex-wrap: wrap;              /* permite que el texto se vaya a la siguiente línea si es largo */
+  text-align: left;
+}
 
     /* NEON LINE */
     hr.neon {
